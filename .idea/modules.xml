@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/externalPlugins/ImageTools-inplacePlugin.iml" filepath="$PROJECT_DIR$/externalPlugins/ImageTools-inplacePlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageTools-inplacePlugin.iml" filepath="$PROJECT_DIR$/ImageTools-inplacePlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opes.iml" filepath="$PROJECT_DIR$/opes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opes-grailsPlugins.iml" filepath="$PROJECT_DIR$/opes-grailsPlugins.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,40 @@
+<plugin name='image-tools' version='1.0.5' grailsVersion='2.0.0 &gt; *'>
+  <author>Ricardo J. Mendez</author>
+  <authorEmail>ricardo@arquetipos.co.cr</authorEmail>
+  <title>Basic image tools based on JAI</title>
+  <documentation>http://grails.org/ImageTools+plugin</documentation>
+  <type>ImageToolsGrailsPlugin</type>
+  <resources />
+  <repositories>
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://repo.grails.org/grails/libs-releases' url='http://repo.grails.org/grails/libs-releases/' />
+    <repository name='http://m2repo.spockframework.org/ext/' url='http://m2repo.spockframework.org/ext/' />
+    <repository name='http://download.java.net/maven/2/' url='http://download.java.net/maven/2/' />
+  </repositories>
+  <dependencies>
+    <runtime>
+      <dependency group='mysql' name='mysql-connector-java' version='5.1.16' />
+      <dependency group='javax.mail' name='mail' version='1.4.4' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <runtime>
+      <plugin group='org.grails.plugins' name='mail' version='1.0' />
+      <plugin group='org.grails.plugins' name='jquery' version='1.7.1' />
+      <plugin group='org.grails.plugins' name='spring-security-core' version='1.2.7.3' />
+      <plugin group='org.grails.plugins' name='hibernate' version='2.0.0' />
+      <plugin group='org.grails.plugins' name='excel-import' version='1.0.0' />
+      <plugin group='org.grails.plugins' name='resources' version='1.1.5' />
+      <plugin group='org.grails.plugins' name='joda-time' version='1.4' />
+    </runtime>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.0.0' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
