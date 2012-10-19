@@ -1,28 +1,39 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="layout" content="main" />
-        <title>RECUPERACI&Oacute;N DE CONTRASEÑA DEL USUARIO OPES</title>
-    </head>
-    <body>
-		<div id='login' align="center">
-		<div class="titulo">
-            <h1>Cambio de Contrase&ntilde;a Exitoso</h1>
-        </div>
-        <br><br><br><br><br>
-			<table  style="width: 500px;">	
-				<tr>	
-					<g:if test="${flash.message}">			
-						<td>${flash.message}</td>
-					</g:if>
-					<g:else>
-     					<td>${flash.messageError}</td>
-					</g:else>
-			    </tr>
-			</table>
-			<a href="${createLink(uri: '/')}">
-		        		<img id="btnRegresar" src="${resource(dir:'images',file:'Icono_ok1.png')}" alt="Regresar" border="0" />
-		    </a>
-		</div>
-    </body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="main"/>
+    <title>RECUPERACI&Oacute;N DE CONTRASEÑA DEL USUARIO OPES</title>
+</head>
+
+<body>
+<h2>Cambio de contrase&ntilde;a exitoso</h2>
+
+<p id="page-intro">Se ha completado el cambio de contrase&ntilde;a</p>
+
+<div class="content-box"><!-- Start Content Box -->
+
+    <div class="content-box-header">
+
+        <h3>Mensaje</h3>
+
+
+        <div class="clear"></div>
+
+    </div> <!-- End .content-box-header -->
+
+    <div class="content-box-content">
+    <p>
+        <g:if test="${flash.message}">
+            ${flash.message}
+        </g:if>
+        <g:else>
+            ${flash.messageError}
+        </g:else>
+     </p>
+        <a class="button" href="${createLink(uri: '/')}">Regresar</a>
+    </div>
+</div>
+
+
+</body>
 </html>

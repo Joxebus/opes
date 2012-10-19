@@ -36,39 +36,40 @@
         Inicio
         </a>
     </li>
-
+    <sec:ifAnyGranted roles="ROLE_DOCENTE,ROLE_ALUMNO">
     <li>
+
         <a href="#" class="nav-top-item">
-            P&aacute;ginas
+            Cursos
         </a>
         <ul>
-            <li><a href="#">Crear p&aacute;gina</a>
-            </li> <!-- agregar class=current para que sea por default o submenu actual-->
-            <li><a href="#">Administras p&aacute;ginas</a></li>
+            <sec:ifAnyGranted roles="ROLE_DOCENTE">
+            <li><g:link controller="docente" action="createCurso">Crear curso</g:link></li>
+            <li><g:link controller="docente" action="listCursosImpartidos">Cursos impartidos</g:link></li>
+            <li><a href="#">Subir material</a></li><!-- agregar class=current para que sea por default o submenu actual-->
+            </sec:ifAnyGranted>
+            <sec:ifAnyGranted roles="ROLE_ALUMNO">
+            <li><a href="#">Cursos disponibles</a></li>
+            <li><a href="#">Cursos enrolados</a></li>
+            <li><a href="#">Subir una tarea</a></li>
+            </sec:ifAnyGranted>
         </ul>
     </li>
+    </sec:ifAnyGranted>
 
-
-    <li>
-        <a href="#" class="nav-top-item">
-            Eventos
-        </a>
-        <ul>
-            <li><a href="#">Revisi&oacute;n de Calendario</a></li>
-            <li><a href="#">Agregar un evento</a></li>
-            <li><a href="#">Configuraci&oacute;n de calendario</a></li>
-        </ul>
-    </li>
 
     <li>
         <a href="#" class="nav-top-item">
             Configuraci&oacute;n
         </a>
         <ul>
-            <li><a href="#">General</a></li>
-            <li><a href="#">Dise&ntilde;o</a></li>
+            <sec:ifAnyGranted roles="ROLE_ADMIN">
+            <li><g:link controller="solicitudCuenta">Administrar usuarios</g:link></li>
+            </sec:ifAnyGranted>
+            <sec:ifAnyGranted roles="ROLE_DOCENTE,ROLE_ALUMNO">
             <li><a href="#">Mi perfil</a></li>
             <li><a href="#">Usuarios y Permisos</a></li>
+            </sec:ifAnyGranted>
         </ul>
     </li>
 

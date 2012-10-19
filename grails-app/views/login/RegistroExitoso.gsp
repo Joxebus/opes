@@ -16,11 +16,14 @@
 
     </div> <!-- End .content-box-header -->
 	<div class="content-box-content">
-            Su registro ha sido exitoso, el administrador del sistema se pondr&aacute; en contacto con usted para validar su identidad y habilitar su cuenta de acceso, en estos momentos usted ya puede cerrar la ventana.</td>
-
+            <p>
+            Su registro ha sido exitoso, el administrador del sistema se pondr&aacute; en contacto con usted para validar su identidad y habilitar su cuenta de acceso, en estos momentos usted ya puede cerrar la ventana.
+            </p>
+            <br/>
 			<a href="${createLink(uri: '/')}" class="button">Regresar</a>
 
 
 		</div>
+</div>
     </body>
 </html>

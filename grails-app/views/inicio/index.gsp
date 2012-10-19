@@ -58,7 +58,7 @@
 
     <div class="content-box-header">
 
-        <h3>Welcome to Grails</h3>
+        <h3>Bienvenido al sistema OPES</h3>
 
 
         <div class="clear"></div>
@@ -67,25 +67,18 @@
 
     <div class="content-box-content">
 
+    <h2>Descripci&oacute;n del sistema:</h2>
+    <p>El sistema OPES  es una aplicación web de tipo Ambiente Educativo Virtual, un sistema de gestión de cursos,
+     que ayuda a los educadores a crear comunidades de aprendizaje en línea.
+    Este tipo de plataformas tecnológicas también se conoce como LMS (Learning Management System).
+    </p>
+    <p>
+        Un profesor que opera desde este punto de vista crea un ambiente centrado en el estudiante que le ayuda a
+        construir ese conocimiento con base en sus habilidades y conocimientos propios en lugar de simplemente
+        publicar y transmitir la información que se considera que los estudiantes deben conocer.
+    </p>
 
 
-
-
-
-
-    <p>Congratulations, you have successfully started your first Grails application! At the moment
-    this is the default page, feel free to modify it to either redirect to a controller or display whatever
-    content you may choose. Below is a list of controllers that are currently deployed in this application,
-    click on each to execute its default action:</p>
-
-    <div id="controller-list" role="navigation">
-        <h2>Available Controllers:</h2>
-        <ul>
-            <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-            </g:each>
-        </ul>
-    </div>
 </div>
 </div>
 </body>

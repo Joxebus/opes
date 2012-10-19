@@ -4,12 +4,10 @@
 </head>
 
 <body>
-<div class='body'>
-	<div style="height: 200px; text-align: center; font-size: 20px;">
-		<br>
-		
-		<br><br>
-		<g:message code="opes.springSecurity.denied.messages" default="Lo sentimos, pero no tienes los suficientes privilegios para accesar a esta pagina." />
-	</div>
-</div>
+<h2>Acceso denegado</h2>
+
+<p id="page-intro"><g:message code="opes.springSecurity.denied.messages" default="Lo sentimos, pero no tienes los suficientes privilegios para accesar a esta pagina." /></p>
+
+<a class="button" href="${createLink(uri: '/')}">Regresar</a>
+
 </body>

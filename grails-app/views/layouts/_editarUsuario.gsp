@@ -7,7 +7,7 @@
 --%>
 <div id="editar_usuario"
      style="display: none;"><!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
-    <g:form name="Name" autocomplete='off' enctype="multipart/form-data">
+    <g:form name="Name" autocomplete='off' enctype="multipart/form-data" controller="inicio">
         Tipo de usuario:<pre>&#09;</pre> <b>${session.usuario?.tipoUsuario}</b>
         <br/>
 
@@ -49,7 +49,7 @@
 
 
 
-        <g:actionSubmit class="button" value="Aceptar" action="actualizarUsuario" controller="inicio"
+        <g:actionSubmit class="button" value="Aceptar" action="actualizarUsuario"
                         src="${resource(dir:'images',file:'Icono_ok1.png')}"
                         style="border: 0; background:transparent;"/>
         <a class="button" href="${createLink(uri: '/')}">Cancelar</a>
