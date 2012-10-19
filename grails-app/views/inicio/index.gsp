@@ -27,27 +27,27 @@
 <ul class="shortcut-buttons-set">
 
     <li><a class="shortcut-button" href="#"><span>
-        <img src="images/icons/pencil_48.png" alt="icon"/><br/>
+        <img src="${resource(dir: 'images/icons', file: 'pencil_48.png')}" alt="icon"/><br/>
         Escribir un art&iacute;culo
     </span></a></li>
 
     <li><a class="shortcut-button" href="#"><span>
-        <img src="images/icons/paper_content_pencil_48.png" alt="icon"/><br/>
+        <img src="${resource(dir: 'images/icons', file: 'paper_content_pencil_48.png')}" alt="icon"/><br/>
         Crear una nueva p&aacute;gina
     </span></a></li>
 
     <li><a class="shortcut-button" href="#"><span>
-        <img src="images/icons/image_add_48.png" alt="icon"/><br/>
+        <img src="${resource(dir: 'images/icons', file: 'image_add_48.png')}" alt="icon"/><br/>
         Cargar una imagen
     </span></a></li>
 
     <li><a class="shortcut-button" href="#"><span>
-        <img src="images/icons/clock_48.png" alt="icon"/><br/>
+        <img src="${resource(dir: 'images/icons', file: 'clock_48.png')}" alt="icon"/><br/>
         Agregar un evento
     </span></a></li>
 
     <li><a class="shortcut-button" href="#messages" rel="modal"><span>
-        <img src="images/icons/comment_48.png" alt="icon"/><br/>
+        <img src="${resource(dir: 'images/icons', file: 'comment_48.png')}" alt="icon"/><br/>
         Revisar mensajes
     </span></a></li>
 
@@ -68,6 +68,9 @@
     <div class="content-box-content">
 
     <h2>Descripci&oacute;n del sistema:</h2>
+    <div class="foto_logo">
+    <img class="foto_perfil" src="${resource(dir: 'images', file: 'aulavirtual.jpg')}">
+    </div>
     <p>El sistema OPES  es una aplicación web de tipo Ambiente Educativo Virtual, un sistema de gestión de cursos,
      que ayuda a los educadores a crear comunidades de aprendizaje en línea.
     Este tipo de plataformas tecnológicas también se conoce como LMS (Learning Management System).

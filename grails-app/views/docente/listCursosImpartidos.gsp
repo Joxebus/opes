@@ -22,6 +22,7 @@
 
     <div class="content-box-content">
 
+
         <g:if test="${flash.success}">
         <div class="notification success png_bg">
 				<a href="#" class="close"><img src="${resource(dir: 'images/icons', file: 'cross_grey_small.png')}" title="Cerrar notificaci&oacute;n" alt="cerrar"/></a>
@@ -62,12 +63,12 @@
                 
 
                 <g:sortableColumn property="descripcion"
-                                  title="${message(code: 'curso.descripcion.label', default: 'Descripcion')}"/>
+                                  title="${message(code: 'curso.descripcion.label', default: 'Descripcion')}" width="40%"/>
                 
-                <th><g:message code="curso.docente.label" default="Docente"/></th>
+
 
                 <g:sortableColumn property="fechaInicio"
-                                  title="${message(code: 'curso.fechaInicio.label', default: 'Fecha Inicio')}"/>
+                                  title="${message(code: 'curso.fechaInicio.label', default: 'Fecha Inicio')}" />
                 
                 <g:sortableColumn property="fechaFin"
                                   title="${message(code: 'curso.fechaFin.label', default: 'Fecha Fin')}"/>
@@ -82,9 +83,8 @@
                     
                     <td>${fieldValue(bean: cursoInstance, field: "titulo")}</td>
                     
-                    <td>${fieldValue(bean: cursoInstance, field: "descripcion")}</td>
-                    
-                    <td>${fieldValue(bean: cursoInstance, field: "docente")}</td>
+                    <td width="40%">${cursoInstance?.descripcion}</td>
+
 
                     <td><g:formatDate date="${cursoInstance.fechaInicio}" format="dd-MMMM-yyyy"/></td>
 
@@ -93,8 +93,8 @@
                     <td><!-- Icons -->
                     <g:form>
                         <g:hiddenField name="id" value="${cursoInstance.id}"/>
-                        <g:actionSubmitImage value="Editar" src="${resource(dir: 'images/icons', file: 'pencil.png')}" action="editCurso"/>
-                        <g:actionSubmitImage value="Eliminar" src="${resource(dir: 'images/icons', file: 'cross.png')}" action="deleteCurso" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
+                        <g:actionSubmitImage value="Editar" src="${resource(dir: 'images/icons', file: 'pencil.png')}" action="editCurso" id="icono_boton"/>
+                        <g:actionSubmitImage value="Eliminar" src="${resource(dir: 'images/icons', file: 'cross.png')}" action="deleteCurso" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" id="icono_boton"/>
                     </g:form>
                     </td>
                 </tr>
@@ -104,17 +104,15 @@
             <tr>
                 <td colspan="6">
                     <div class="bulk-actions align-left">
-
+                          <small><b><a href="#" class="requerido">De click sobre el t&iacute;tulo del curso para agregar temas</a></b></small>
                     </div>
 
-
-
-                    <div class="clear"></div>
                 </td>
             </tr>
             </tfoot>
             </tbody>
         </table>
+
 
         <div class="pagination">
                         <g:paginate total="${cursoInstanceTotal}"/>

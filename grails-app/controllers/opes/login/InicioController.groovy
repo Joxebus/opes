@@ -52,14 +52,15 @@ class InicioController {
                     docente.typo = typo
                     docente.beforeUpdate()
                     if(!docente.save(flush: true)){
-                        println "no se pudo guardar la imagen"
+                       flash.error "No se pudo guardar la imagen"
                     }
                     break;
             }
         }
         usuario.beforeUpdate()
         usuario.save()
-        flash.success = "El usuario ha sido actualizado correctamente"
+        if(!flash.error)
+            flash.success = "El usuario ha sido actualizado correctamente"
         redirect action: 'index'
     }
 
@@ -69,16 +70,12 @@ class InicioController {
         switch (usuario.tipoUsuario) {
             case "ALUMNO":
                 alumnoDocente = Alumno.findByUsuarioSistemaAndEstadoLogicoNotEqual(usuario, 3)
-                println "Estudiante $alumnoDocente Image type "+alumnoDocente.typo
-                println "Image size "+alumnoDocente.foto
                 response.contentType = alumnoDocente.typo
                 response.outputStream << alumnoDocente.foto
                 response.outputStream.flush()
                 break;
             case "DOCENTE":
                 alumnoDocente = Docente.findByUsuarioSistemaAndEstadoLogicoNotEqual(usuario, 3)
-                println "Estudiante $alumnoDocente Image type "+alumnoDocente.typo
-                println "Image size "+alumnoDocente.foto
                 response.contentType = alumnoDocente.typo
                 response.outputStream << alumnoDocente.foto
                 response.outputStream.flush()

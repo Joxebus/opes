@@ -11,7 +11,7 @@
 <div id="profile-links">
     Hola <a href="#editar_usuario" rel="modal" title="Editar perfil">${session.usuario}</a>,<br/>tienes <a href="#messages" rel="modal"
                                                                                     title="3 mensajes">3 mensajes</a><br/>
-    <g:link controller="logout">Cerrar sesi&oacute;n</g:link><br/>
+    <g:link controller="logout">Cerrar sesi&oacute;n<img src="${resource(dir: 'images/style', file: 'logout.png')}" width="15px"/></g:link><br/>
     <g:if test="${session.alumnoDocente?.foto}">
             <div>
                  <a href="#modal_foto_perfil" rel="modal" alt="Ver foto">

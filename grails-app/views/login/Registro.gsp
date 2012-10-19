@@ -110,9 +110,7 @@
                 </p>
 
 
-                <g:actionSubmit class="button" value="Aceptar" action="save"
-                                                              src="${resource(dir:'images',file:'Icono_ok1.png')}"
-                                                              style="border: 0; background:transparent;"/>
+                <g:actionSubmit class="button" value="Aceptar" action="save"/>
                 <a class="button" href="${createLink(uri: '/')}">Cancelar</a>
 
             </g:form>

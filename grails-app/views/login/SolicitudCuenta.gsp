@@ -132,7 +132,7 @@
                 <td>
                     <g:form>
                         <g:hiddenField name="id" value="${usuarioInstance.id}"/>
-                        <g:actionSubmitImage src="${resource(dir:'images/style', file:'delete.png')}"
+                        <g:actionSubmitImage id="icono_boton" src="${resource(dir:'images/style', file:'delete.png')}"
                                              action="delete"
                                              value="${message(code: 'default.button.delete.label', default: 'Delete')}"
                                              onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
