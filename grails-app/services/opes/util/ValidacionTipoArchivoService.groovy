@@ -4,6 +4,8 @@ class ValidacionTipoArchivoService {
 
 	def word = ["doc", "docx"]
 	def wordMime = ["application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
+	def excel = ['xls','xlsx']
+	def excelMime = ['application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']
 	def pdf = ["pdf"]
 	def pdfMime=["application/pdf"]
 	def audio= ["mp3", "wav", "wma"]
@@ -18,6 +20,14 @@ class ValidacionTipoArchivoService {
         log.info index
         log.info "MIME de la extension $extension"
         return index ? wordMime[index] : null
+	}
+	
+	String isExcel(String extension){
+		extension = extension.toLowerCase()
+		def index = excel.indexOf(extension)+1
+        log.info index
+        log.info "MIME de la extension $extension"
+        return index ? excelMime[index] : null
 	}
 	
 	
